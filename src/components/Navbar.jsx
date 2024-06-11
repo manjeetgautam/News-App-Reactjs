@@ -1,5 +1,5 @@
 
-export const Navbar = () => {
+export const Navbar = ({setCategory}) => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary w-100" data-bs-theme="dark">
@@ -10,17 +10,21 @@ export const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+       
+        <li className="nav-item" style={{"cursor":"pointer"}}>
+          <div className="nav-link" onClick={()=>{setCategory("technology")}}>Technology</div>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Features</a>
+        <li className="nav-item" style={{"cursor":"pointer"}}>
+          <div className="nav-link" onClick={()=>{setCategory("business")}}>Bussiness</div>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Pricing</a>
+        <li className="nav-item" style={{"cursor":"pointer"}}>
+          <div className="nav-link" onClick={()=>{setCategory("health")}}>Health</div>
         </li>
-        <li className="nav-item">
-          <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+        <li className="nav-item" style={{"cursor":"pointer"}}>
+          <div className="nav-link" onClick={()=>{setCategory("sports")}}>Sports</div>
+        </li>
+        <li className="nav-item" style={{"cursor":"pointer"}}>
+          <div className="nav-link" onClick={()=>{setCategory("entertainment")}}>Entertainment</div>
         </li>
       </ul>
     </div>

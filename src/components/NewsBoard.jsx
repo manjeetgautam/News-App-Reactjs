@@ -17,7 +17,7 @@ export const NewsBoard = ({category}) => {
       }
     };
     getdata();
-  }, []);
+  }, [category]);
 
   // console.log(news);
 
@@ -34,6 +34,7 @@ export const NewsBoard = ({category}) => {
               title={news.title}
               description={news.description}
               content={news.content}
+              newsurl={news.url}
             />
           );
         })}
